@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://group.singtel.com/enterpriseapplicationintegration/common-types/v1" elementFormDefault="qualified" targetNamespace="http://group.singtel.com/enterpriseapplicationintegration/common-types/v1">
+    <xs:annotation>
+        <xs:documentation>
+            Based on SDP HLD Design document
+        </xs:documentation>
+    </xs:annotation>
+
+
+    <xs:simpleType name="ResponseStatusCodeENUM">
+        <xs:annotation>
+            <xs:documentation>
+                SUCCESS
+                WARNING
+                Status code to identify overall status response
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="SUCCESS"/>
+            <xs:enumeration value="WARNING"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="SDPSeverity">
+        <xs:annotation>
+            <xs:documentation>
+                This enum has been used in case of fault (HTTP 500 scenarios).
+                SUCCESS
+                ERROR
+                WARNING
+                CRITICAL
+                INFO
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="SUCCESS"/>
+            <xs:enumeration value="WARNING"/>
+            <xs:enumeration value="ERROR"/>
+            <xs:enumeration value="CRITICAL"/>
+            <xs:enumeration value="INFO"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="SDPStatusResponse">
+        <xs:annotation>
+            <xs:documentation>
+                SDP status report for the service operation. Will be part of response message
+            </xs:documentation>
+        </xs:annotation>
+        <!--<xs:complexContent>-->
+        <!--<xs:extension base="tns:SDPStatus">-->
+        <xs:sequence>
+            <xs:element name="transactionStatusCode" nillable="false" type="tns:ResponseStatusCodeENUM"/>
+            <xs:element maxOccurs="1" minOccurs="1" name="serviceVersion" type="xs:string"/>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="sdpStatusLine" type="tns:SDPStatusLine"/>
+        </xs:sequence>
+        <!--</xs:extension>-->
+        <!--</xs:complexContent>-->
+    </xs:complexType>
+    <xs:element name="sdpStatusResponse" type="tns:SDPStatusResponse"/>
+
+
+    <xs:complexType name="SDPStatusLine">
+        <xs:sequence>
+            <xs:element maxOccurs="1" minOccurs="1" name="stepStatusTime" type="xs:dateTime"/>
+            <xs:element maxOccurs="1" minOccurs="1" name="processStep" nillable="true" type="xs:string"/>
+            <xs:element maxOccurs="1" minOccurs="1" name="severity" nillable="false" type="tns:SDPSeverity"/>
+            <xs:element maxOccurs="1" minOccurs="1" name="statusCode" type="xs:normalizedString"/>
+            <xs:element maxOccurs="1" minOccurs="1" name="statusDescription" type="xs:string"/>
+            <xs:element minOccurs="0" name="providerFault" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="traceData" nillable="true" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="SDPResponse">
+        <xs:annotation>
+            <xs:documentation>
+                SDP status report for the service operation. Will be part of response message
+            </xs:documentation>
+        </xs:annotation>
+        <!--<xs:complexContent>-->
+        <!--<xs:extension base="tns:SDPStatus">-->
+        <xs:sequence>
+            <xs:element name="SDPStatusResponse" nillable="false" type="tns:SDPStatusResponse"/>
+         </xs:sequence>
+        <!--</xs:extension>-->
+        <!--</xs:complexContent>-->
+    </xs:complexType>
+    <xs:element name="sdpResponse" type="tns:SDPResponse"/>
+
+
+    <xs:complexType name="SDPStatusFault">
+        <xs:annotation>
+            <xs:documentation>
+                A common data structure defining faults for SDP
+            </xs:documentation>
+        </xs:annotation>
+        <!--<xs:complexContent>-->
+            <!--<xs:extension base="tns:SDPStatus">-->
+                <xs:sequence>
+                    <xs:element maxOccurs="1" minOccurs="1" name="statusCode" type="xs:normalizedString"/>
+                    <xs:element minOccurs="0" name="consumerReferenceID" nillable="true" type="xs:normalizedString"/>
+                    <xs:element name="transactionID" nillable="false" type="xs:normalizedString"/>
+                    <xs:element maxOccurs="1" minOccurs="1" name="statusTime" nillable="false" type="xs:dateTime"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="1" name="sdpStatusLine" type="tns:SDPStatusLine"/>
+                </xs:sequence>
+        <!--</xs:extension>-->
+        <!--</xs:complexContent>-->
+
+    </xs:complexType>
+    <xs:element name="sdpDetails" type="tns:SDPStatusFault"/>
+
+
+    <!--soap headers-->
+    <xs:element name="sdpServiceHeaders" type="tns:SDPServiceHeaders"/>
+    <xs:complexType name="SDPServiceHeaders">
+        <xs:sequence>
+            <xs:element maxOccurs="1" minOccurs="1" name="applicationIdentity" nillable="false" type="xs:string"/>
+            <xs:element maxOccurs="1" minOccurs="1" name="systemIdentity" nillable="false" type="xs:string"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="consumerReferenceId" nillable="false" type="xs:string"/>
+            <xs:element maxOccurs="1" minOccurs="1" name="consumerReferenceDateTime" nillable="false" type="xs:dateTime"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="csrIdentity" nillable="false" type="xs:string"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="userIdentity" nillable="false" type="xs:string"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="languageCode" nillable="false" type="xs:string"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="countryCode" nillable="false" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="sdpServiceResponseHeaders" type="tns:SDPServiceResponseHeaders"/>
+    <xs:complexType name="SDPServiceResponseHeaders">
+        <xs:sequence>
+            <xs:element maxOccurs="1" minOccurs="0" name="consumerReferenceId" nillable="false" type="xs:string"/>
+            <xs:element maxOccurs="1" minOccurs="1" name="transactionResponseDateTime" nillable="false" type="xs:dateTime"/>
+            <xs:element maxOccurs="1" minOccurs="1" name="transactionId" nillable="false" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

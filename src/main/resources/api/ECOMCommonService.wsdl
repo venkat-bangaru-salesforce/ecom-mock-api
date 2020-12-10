@@ -1,0 +1,730 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://common.ecom/" xmlns:impl="http://common.ecom/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:intf="http://common.ecom/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:sgc="http://group.singtel.com/enterpriseapplicationintegration/common-types/v1">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://common.ecom/" xmlns="http://www.w3.org/2001/XMLSchema">
+      <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+      <import namespace="http://group.singtel.com/enterpriseapplicationintegration/common-types/v1"
+				schemaLocation="sdp_singtel_service_common.xsd" />
+      <element name="getBizCircleInfoReq">
+		<complexType>
+			<sequence>
+				<element minOccurs="0" name="acctNo" nillable="true" type="xsd:string"/>
+				<element minOccurs="0" name="acctNoType" nillable="true" type="xsd:string"/>
+			</sequence>
+		</complexType>
+	  </element> 
+	  <element name="getBizCircleInfoResp">
+		<complexType>
+			<sequence>
+				<element minOccurs="0" name="statusDO" nillable="true" type="intf:StatusDO"/>
+				<element minOccurs="0" name="BizCircleInfoDO" nillable="true" type="intf:GetBizCircleInfoDO"/>
+			</sequence>
+		</complexType>
+	  </element>
+	  
+	  <element name="getBizCircleIndBySvcNoReq">
+		<complexType>
+			<sequence>
+				<element minOccurs="0" name="serviceNo" nillable="true" type="xsd:string"/>
+				<element minOccurs="0" name="serviceType" nillable="true" type="xsd:string"/>
+			</sequence>
+		</complexType>
+	  </element>
+	  <element name="getBizCircleIndBySvcNoResp">
+		<complexType>
+			<sequence>
+				<element minOccurs="0" name="statusDO" nillable="true" type="intf:StatusDO"/>
+				<element minOccurs="0" name="BizCircleIndBySvcNoDO" nillable="true" type="intf:GetBizCircleIndBySvcNoDO"/>
+			</sequence>
+		</complexType>
+	  </element>
+
+    <element name="updateDDIInfoReq">
+		<complexType>
+			<sequence>
+				<element minOccurs="0" name="workOrderNo" nillable="true" type="xsd:string"/>
+				<element minOccurs="0" name="batchTxnID" nillable="true" type="xsd:string"/>
+        <element minOccurs="0" name="requestType" nillable="true" type="xsd:string"/>
+        <element minOccurs="0" name="DDIInfo" nillable="true" type="intf:DDIInfoDO"/>
+			</sequence>
+		</complexType>
+	  </element>
+	  <element name="updateDDIInfoResp">
+    		<complexType>
+			<sequence>
+				<element form="unqualified" minOccurs="0" name="updateDDIInfoReturn" nillable="true" type="intf:updateDDIInfoDO"/>
+			</sequence>
+		</complexType>
+	  </element>
+      <element name="getAddrHistBySvcInstIdReq">
+		<complexType>
+			<sequence>
+				<element minOccurs="0" name="inSvcInstId" nillable="true" type="xsd:string"/>
+			</sequence>
+		</complexType>
+	  </element>
+	  <element name="getAddrHistBySvcInstIdResp">
+    	<complexType>
+			<sequence>
+				<element form="unqualified" minOccurs="0" name="getAddrHistBySvcInstIdDO" nillable="true" type="intf:getAddrHistBySvcInstIdDO"/>
+			</sequence>
+		</complexType>
+	  </element>
+      <element name="getNotesExtReq">
+		<complexType>
+			<sequence>
+				<element minOccurs="0" name="acctNo" nillable="true" type="xsd:string"/>
+				<element minOccurs="0" name="acctNoType" nillable="true" type="xsd:string"/>
+				<element minOccurs="0" name="serviceNo" nillable="true" type="xsd:string"/>
+				<element minOccurs="0" name="serviceType" nillable="true" type="xsd:string"/>
+				<element minOccurs="0" name="workOrdNo" nillable="true" type="xsd:string"/>
+			</sequence>
+		</complexType>
+	  </element>
+	  <element name="getNotesExtResp">
+    	<complexType>
+			<sequence>
+				<element form="unqualified" minOccurs="0" name="result" nillable="true" type="intf:getNotesExtDO"/>
+			</sequence>
+		</complexType>
+	  </element>
+      <element name="getPrdtTieInfoReq">
+		<complexType>
+			<sequence>
+				<element minOccurs="0" name="svcInstId" nillable="true" type="xsd:string"/>
+			</sequence>
+		</complexType>
+	  </element>
+	  <element name="getPrdtTieInfoResp">
+    	<complexType>
+			<sequence>
+				<element form="unqualified" minOccurs="0" name="getPrdtTieInfoDO" nillable="true" type="intf:GetPrdtTieInfoDO"/>
+			</sequence>
+		</complexType>
+	  </element>
+      <element name="getIMEIChangeDatesReq">
+		<complexType>
+			<sequence>
+				<element minOccurs="0" name="svcInstId" nillable="true" type="xsd:string"/>
+			</sequence>
+		</complexType>
+	  </element>
+	  <element name="getIMEIChangeDatesResp">
+    	<complexType>
+			<sequence>
+				<element form="unqualified" minOccurs="0" name="getIMEIChangeDatesDO" nillable="true" type="intf:GetIMEIChangeDatesDO"/>
+			</sequence>
+		</complexType>
+	  </element>
+      <element name="srchSvcNoInfoByExtAcctNoReq">
+		<complexType>
+			<sequence>
+				<element minOccurs="0" name="extAcctNo" nillable="true" type="xsd:string"/>
+			</sequence>
+		</complexType>
+	  </element>
+	  <element name="srchSvcNoInfoByExtAcctNoResp">
+    	<complexType>
+			<sequence>
+				<element form="unqualified" minOccurs="0" name="srchSvcNoInfoByExtAcctNoDO" nillable="true" type="intf:SrchSvcNoInfoByExtAcctNoDO"/>
+			</sequence>
+		</complexType>
+	  </element>
+      <element name="getContractInfobySvcNoReq">
+		<complexType>
+			<sequence>
+				<element form="unqualified" minOccurs="0" name="svcNoList" nillable="true" type="intf:ArrayOfSvcNoDO"/>
+			</sequence>
+		</complexType>
+	  </element>
+	  <element name="getContractInfobySvcNoResp">
+    	<complexType>
+			<sequence>
+				<element form="unqualified" minOccurs="0" name="getContractInfoBySvcNoDO" nillable="true" type="intf:GetContractInfoBySvcNoDO"/>
+			</sequence>
+		</complexType>
+	  </element>
+      <element name="getAMDetailsReq">
+		<complexType>
+			<sequence>
+				<element minOccurs="0" name="svcOrdNo" nillable="true" type="xsd:string"/>
+			</sequence>
+		</complexType>
+	  </element>
+	  <element name="getAMDetailsResp">
+    	<complexType>
+			<sequence>
+				<element form="unqualified" minOccurs="0" name="getAMDetailsDO" nillable="true" type="intf:GetAMDetailsDO"/>
+			</sequence>
+		</complexType>
+	  </element>
+      <element name="srchWrkOrdsByCriteriaReq">
+		<complexType>
+			<sequence>
+				<element minOccurs="0" name="custAcctNum" nillable="true" type="xsd:string"/>
+				<element minOccurs="0" name="billAcctId" nillable="true" type="xsd:string"/>
+				<element minOccurs="0" name="svcNum" nillable="true" type="xsd:string"/>
+				<element minOccurs="0" name="svcTy" nillable="true" type="xsd:string"/>
+				<element minOccurs="0" name="svcOrdNo" nillable="true" type="xsd:string"/>
+				<element minOccurs="0" name="svcOrdStatus" nillable="true" type="xsd:string"/>
+				<element minOccurs="0" name="wkOrdNo" nillable="true" type="xsd:string"/>
+				<element minOccurs="0" name="workOrdStatus" nillable="true" type="xsd:string"/>
+			</sequence>
+		</complexType>
+	  </element>
+	  <element name="srchWrkOrdsByCriteriaResp">
+    	<complexType>
+			<sequence>
+				<element form="unqualified" minOccurs="0" name="srchWrkOrdsByCriteriaDO" nillable="true" type="intf:SrchWrkOrdsByCriteriaDO"/>
+			</sequence>
+		</complexType>
+	  </element>
+      <xsd:complexType name="ArrayOfSvcNoDO">
+          <xsd:sequence>
+          	<xsd:element maxOccurs="unbounded" minOccurs="0" name="svcNo" nillable="true" type="xsd:string"/>
+          </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="GetBizCircleInfoDO">
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="bizCircleIndi" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="eligibleLines" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="exisitingTier" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="linesToTierProgression" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="targetNextTier" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="keyLines" nillable="true" type="xsd:string"/>
+          </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="GetBizCircleIndBySvcNoDO">
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="statusDO" nillable="true" type="intf:StatusDO"/>
+            <xsd:element minOccurs="0" name="bizCircleInd" nillable="true" type="xsd:string"/>
+          </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StatusDO">
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="status" nillable="true" type="xsd:boolean"/>
+            <xsd:element minOccurs="0" name="errorCd" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="errorMsg" nillable="true" type="xsd:string"/>
+          </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfIMEIChangeDatesDO">
+          <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="ArrayOfIMEIChangeDatesDO" nillable="true" type="intf:IMEIChangeDatesDO"/>
+          </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="IMEIChangeDatesDO">
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="svcNo" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="imeiChangeDate" nillable="true" type="xsd:string"/>
+          </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfSvcNoInfoDO">
+          <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="arrayOfSvcNoInfoDO" nillable="true" type="intf:SvcNoInfoDO"/>
+          </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="SvcNoInfoDO">
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="svcNo" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="svcTy" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="billAcctId" nillable="true" type="xsd:string"/>
+          </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfSrchWrkOrdsByCriteriaDO">
+          <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="SrchWrkOrdsByCriteriaDO" nillable="true" type="intf:SrchWrkOrdsByCriteriaDO"/>
+          </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="SrchWrkOrdsByCriteriaDO">
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="returnStatus" nillable="true" type="xsd:boolean"/>
+            <xsd:element minOccurs="0" name="errCode" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="errMsg" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="srchWrkOrdsList" nillable="true" type="intf:ArrayOfSrchWrkOrdDO"/>
+          </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfSrchWrkOrdDO">
+          <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="srchWrkOrdDO" nillable="true" type="intf:SrchWrkOrdDO"/>
+          </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="SrchWrkOrdDO">
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="workOrdNo" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="workOrdStatus" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="svcOrdNo" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="svcOrdStatus" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="svcTy" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="svcNum" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="custNm" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="crdDt" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="billAcctId" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="billAcctName" nillable="true" type="xsd:string"/>
+          </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfAMDetailsDO">
+          <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="amDetailsDO" nillable="true" type="intf:AMDetailsDO"/>
+          </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="AMDetailsDO">
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="amId" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="amName" nillable="true" type="xsd:string"/>
+          </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfAbstractContractInfoDO">
+          <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="AbstractContractInfoDO" nillable="true" type="intf:AbstractContractInfoDO"/>
+          </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="AbstractContractInfoDO">
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="svcNo" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="startDt" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="endDt" nillable="true" type="xsd:string"/>
+          </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfPrdTieInfo">
+          <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="ArrayOfPrdTieInfo" nillable="true" type="intf:PrdTieInfo"/>
+          </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="PrdTieInfo">
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="tieTy" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="tieId" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="tieDesc" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="startDt" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="endDt" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="cancelledReason" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="svcOrdNo" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="svcInstId" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="svcTy" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="arborSvcTy" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="workOrdNo" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="workOrdStatus" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="extId" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="svcInstStatus" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="custId" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="custName" nillable="true" type="xsd:string"/>
+          </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="NotesExt">
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="notesInfoExt" nillable="true" type="intf:ArrayOfNotesInfoExtDO"/>
+          </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfNotesInfoExtDO">
+          <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="NotesInfoExtDO" nillable="true" type="intf:NotesInfoExtDO"/>
+          </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="NotesInfoExtDO">
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="notesId" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="workOrdNo" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="svcInstId" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="acctId" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="notesType" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="notesText" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="notesDesc" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="permanentInd" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="expiredDt" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="createdBy" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="createdDt" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="lastUpdateId" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="lastUpdateDt" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="inUseInd" nillable="true" type="xsd:string"/>
+          </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfAddressDO">
+          <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="AddressDO" nillable="true" type="intf:AddressDO"/>
+          </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="AddressDO">
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="blockTy" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="blkHseDesc" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="blkHseNo" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="streetNm" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="floorLvlUnitDesc" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="floorLvlUnitNo" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="bldgNm" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="devNm" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="localityNm" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="state" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="country" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="postalCd" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="acctLocationDesc" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="acctAddrType" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="acctId" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="installationNm" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="siWoAddrTy" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="startDt" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="endDt" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="lastModifyDt" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="lastUpdateId" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="exchangeCode" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="currentGW" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="addrKey" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="unstructInd" nillable="true" type="xsd:string"/>
+          </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="DDIInfoDO">
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="DDINumber" nillable="true" type="xsd:integer"/>
+            <xsd:element minOccurs="0" name="StartDT" nillable="true" type="xsd:dateTime"/>
+            <xsd:element minOccurs="0" name="EndDT" nillable="true" type="xsd:dateTime"/>
+          </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="updateDDIInfoDO">
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="status" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="errorCd" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="errorMsg" nillable="true" type="xsd:string"/>
+          </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getAddrHistBySvcInstIdDO">
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="statusDO" nillable="true" type="intf:StatusDO"/>
+            <xsd:element minOccurs="0" name="addrHistListDO" nillable="true" type="intf:ArrayOfAddressDO"/>
+          </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getNotesExtDO">
+          <xsd:sequence>
+          	<xsd:element minOccurs="0" name="statusDO" nillable="true" type="intf:StatusDO"/>
+            <xsd:element minOccurs="0" name="result" nillable="true" type="intf:NotesExt"/>
+          </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="GetPrdtTieInfoDO">
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="statusDO" nillable="true" type="intf:StatusDO"/>
+            <xsd:element minOccurs="0" name="prdtTieInfoDO" nillable="true" type="intf:ArrayOfPrdTieInfo"/>
+          </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="GetIMEIChangeDatesDO">
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="statusDO" nillable="true" type="intf:StatusDO"/>
+            <xsd:element minOccurs="0" name="imeiChangeDatesDO" nillable="true" type="intf:ArrayOfIMEIChangeDatesDO"/>
+          </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="SrchSvcNoInfoByExtAcctNoDO">
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="statusDO" nillable="true" type="intf:StatusDO"/>
+            <xsd:element minOccurs="0" name="svcNoInfoList" nillable="true" type="intf:ArrayOfSvcNoInfoDO"/>
+          </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="GetContractInfoBySvcNoDO">
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="statusDO" nillable="true" type="intf:StatusDO"/>
+            <xsd:element minOccurs="0" name="abstractContractInfoList" nillable="true" type="intf:ArrayOfAbstractContractInfoDO"/>
+          </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="GetAMDetailsDO">
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="statusDO" nillable="true" type="intf:StatusDO"/>
+            <xsd:element minOccurs="0" name="amDetailsDOList" nillable="true" type="intf:ArrayOfAMDetailsDO"/>
+            <xsd:element minOccurs="0" name="secAMId" nillable="true" type="xsd:string"/>
+          </xsd:sequence>
+      </xsd:complexType>
+
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="getBizCircleInfoResponse">
+    <wsdl:part name="parameters" element="impl:getBizCircleInfoResp">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getBizCircleInfoRequest">
+    <wsdl:part name="parameters" element="impl:getBizCircleInfoReq">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateDDIInfoResp">
+    <wsdl:part name="parameters" element="impl:updateDDIInfoResp">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateDDIInfoReq">
+    <wsdl:part name="parameters" element="impl:updateDDIInfoReq">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getBizCircleIndBySvcNoResponse">
+    <wsdl:part name="parameters" element="impl:getBizCircleIndBySvcNoResp">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getBizCircleIndBySvcNoRequest">
+    <wsdl:part name="parameters" element="impl:getBizCircleIndBySvcNoReq">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAddrHistBySvcInstIdResp">
+    <wsdl:part name="parameters" element="impl:getAddrHistBySvcInstIdResp">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAddrHistBySvcInstIdReq">
+    <wsdl:part name="parameters" element="impl:getAddrHistBySvcInstIdReq">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getNotesExtResp">
+    <wsdl:part name="parameters" element="impl:getNotesExtResp">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getNotesExtReq">
+    <wsdl:part name="parameters" element="impl:getNotesExtReq">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPrdtTieInfoResp">
+    <wsdl:part name="parameters" element="impl:getPrdtTieInfoResp">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPrdtTieInfoReq">
+    <wsdl:part name="parameters" element="impl:getPrdtTieInfoReq">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getIMEIChangeDatesResp">
+    <wsdl:part name="parameters" element="impl:getIMEIChangeDatesResp">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getIMEIChangeDatesReq">
+    <wsdl:part name="parameters" element="impl:getIMEIChangeDatesReq">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="srchSvcNoInfoByExtAcctNoResp">
+    <wsdl:part name="parameters" element="impl:srchSvcNoInfoByExtAcctNoResp">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="srchSvcNoInfoByExtAcctNoReq">
+    <wsdl:part name="parameters" element="impl:srchSvcNoInfoByExtAcctNoReq">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getContractInfobySvcNoResp">
+    <wsdl:part name="parameters" element="impl:getContractInfobySvcNoResp">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getContractInfobySvcNoReq">
+    <wsdl:part name="parameters" element="impl:getContractInfobySvcNoReq">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAMDetailsResp">
+    <wsdl:part name="parameters" element="impl:getAMDetailsResp">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAMDetailsReq">
+    <wsdl:part name="parameters" element="impl:getAMDetailsReq">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="srchWrkOrdsByCriteriaResp">
+    <wsdl:part name="parameters" element="impl:srchWrkOrdsByCriteriaResp">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="srchWrkOrdsByCriteriaReq">
+    <wsdl:part name="parameters" element="impl:srchWrkOrdsByCriteriaReq">
+    </wsdl:part>
+  </wsdl:message>
+
+  <!--common headers -->
+	<wsdl:message name="sdpServiceHeaders">
+		<wsdl:part name="sdpServiceHeaders" element="sgc:sdpServiceHeaders" />
+	</wsdl:message>
+
+	<wsdl:message name="sdpServiceResponseHeaders">
+		<wsdl:part name="sdpServiceResponseHeaders" element="sgc:sdpServiceResponseHeaders" />
+	</wsdl:message>
+
+  <wsdl:portType name="ECOMCommonServicePortType">
+    <wsdl:operation name="getBizCircleInfo">
+      <wsdl:input message="impl:getBizCircleInfoRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:getBizCircleInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBizCircleIndBySvcNo">
+      <wsdl:input message="impl:getBizCircleIndBySvcNoRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:getBizCircleIndBySvcNoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateDDIInfo">
+      <wsdl:input message="impl:updateDDIInfoReq">
+    </wsdl:input>
+      <wsdl:output message="impl:updateDDIInfoResp">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAddrHistBySvcInstId">
+      <wsdl:input message="impl:getAddrHistBySvcInstIdReq">
+    </wsdl:input>
+      <wsdl:output message="impl:getAddrHistBySvcInstIdResp">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNotesExt">
+      <wsdl:input message="impl:getNotesExtReq">
+    </wsdl:input>
+      <wsdl:output message="impl:getNotesExtResp">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPrdtTieInfo">
+      <wsdl:input message="impl:getPrdtTieInfoReq">
+    </wsdl:input>
+      <wsdl:output message="impl:getPrdtTieInfoResp">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getIMEIChangeDates">
+      <wsdl:input message="impl:getIMEIChangeDatesReq">
+    </wsdl:input>
+      <wsdl:output message="impl:getIMEIChangeDatesResp">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="srchSvcNoInfoByExtAcctNo">
+      <wsdl:input message="impl:srchSvcNoInfoByExtAcctNoReq">
+    </wsdl:input>
+      <wsdl:output message="impl:srchSvcNoInfoByExtAcctNoResp">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getContractInfobySvcNo">
+      <wsdl:input message="impl:getContractInfobySvcNoReq">
+    </wsdl:input>
+      <wsdl:output message="impl:getContractInfobySvcNoResp">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAMDetails">
+      <wsdl:input message="impl:getAMDetailsReq">
+    </wsdl:input>
+      <wsdl:output message="impl:getAMDetailsResp">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="srchWrkOrdsByCriteria">
+      <wsdl:input message="impl:srchWrkOrdsByCriteriaReq">
+    </wsdl:input>
+      <wsdl:output message="impl:srchWrkOrdsByCriteriaResp">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ECOMCommonServiceSoapBinding" type="impl:ECOMCommonServicePortType">
+    <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getBizCircleInfo">
+      <wsdlsoap:operation soapAction="getBizCircleInfo" style="document"/>
+      <wsdl:input>
+        <wsdlsoap:header message="impl:sdpServiceHeaders" part="sdpServiceHeaders" use="literal" />
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <wsdlsoap:header message="impl:sdpServiceResponseHeaders" part="sdpServiceResponseHeaders" use="literal" />
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBizCircleIndBySvcNo">
+      <wsdlsoap:operation soapAction="getBizCircleIndBySvcNo" style="document"/>
+      <wsdl:input>
+        <wsdlsoap:header message="impl:sdpServiceHeaders" part="sdpServiceHeaders" use="literal" />
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <wsdlsoap:header message="impl:sdpServiceResponseHeaders" part="sdpServiceResponseHeaders" use="literal" />
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateDDIInfo">
+      <wsdlsoap:operation soapAction="updateDDIInfo" style="document"/>
+      <wsdl:input>
+        <wsdlsoap:header message="impl:sdpServiceHeaders" part="sdpServiceHeaders" use="literal" />
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <wsdlsoap:header message="impl:sdpServiceResponseHeaders" part="sdpServiceResponseHeaders" use="literal" />
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAddrHistBySvcInstId">
+      <wsdlsoap:operation soapAction="getAddrHistBySvcInstId" style="document"/>
+      <wsdl:input>
+        <wsdlsoap:header message="impl:sdpServiceHeaders" part="sdpServiceHeaders" use="literal" />
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <wsdlsoap:header message="impl:sdpServiceResponseHeaders" part="sdpServiceResponseHeaders" use="literal" />
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNotesExt">
+      <wsdlsoap:operation soapAction="getNotesExt" style="document"/>
+      <wsdl:input>
+        <wsdlsoap:header message="impl:sdpServiceHeaders" part="sdpServiceHeaders" use="literal" />
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <wsdlsoap:header message="impl:sdpServiceResponseHeaders" part="sdpServiceResponseHeaders" use="literal" />
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPrdtTieInfo">
+      <wsdlsoap:operation soapAction="getPrdtTieInfo" style="document"/>
+      <wsdl:input>
+        <wsdlsoap:header message="impl:sdpServiceHeaders" part="sdpServiceHeaders" use="literal" />
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <wsdlsoap:header message="impl:sdpServiceResponseHeaders" part="sdpServiceResponseHeaders" use="literal" />
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getIMEIChangeDates">
+      <wsdlsoap:operation soapAction="getIMEIChangeDates" style="document"/>
+      <wsdl:input>
+        <wsdlsoap:header message="impl:sdpServiceHeaders" part="sdpServiceHeaders" use="literal" />
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <wsdlsoap:header message="impl:sdpServiceResponseHeaders" part="sdpServiceResponseHeaders" use="literal" />
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="srchSvcNoInfoByExtAcctNo">
+      <wsdlsoap:operation soapAction="srchSvcNoInfoByExtAcctNo" style="document"/>
+      <wsdl:input>
+        <wsdlsoap:header message="impl:sdpServiceHeaders" part="sdpServiceHeaders" use="literal" />
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <wsdlsoap:header message="impl:sdpServiceResponseHeaders" part="sdpServiceResponseHeaders" use="literal" />
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getContractInfobySvcNo">
+      <wsdlsoap:operation soapAction="getContractInfobySvcNo" style="document"/>
+      <wsdl:input>
+        <wsdlsoap:header message="impl:sdpServiceHeaders" part="sdpServiceHeaders" use="literal" />
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <wsdlsoap:header message="impl:sdpServiceResponseHeaders" part="sdpServiceResponseHeaders" use="literal" />
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAMDetails">
+      <wsdlsoap:operation soapAction="getAMDetails" style="document"/>
+      <wsdl:input>
+        <wsdlsoap:header message="impl:sdpServiceHeaders" part="sdpServiceHeaders" use="literal" />
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <wsdlsoap:header message="impl:sdpServiceResponseHeaders" part="sdpServiceResponseHeaders" use="literal" />
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="srchWrkOrdsByCriteria">
+      <wsdlsoap:operation soapAction="srchWrkOrdsByCriteria" style="document"/>
+      <wsdl:input>
+        <wsdlsoap:header message="impl:sdpServiceHeaders" part="sdpServiceHeaders" use="literal" />
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <wsdlsoap:header message="impl:sdpServiceResponseHeaders" part="sdpServiceResponseHeaders" use="literal" />
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ECOMCommonService">
+    <wsdl:port name="ECOMCommonServiceSOAP" binding="impl:ECOMCommonServiceSoapBinding">
+      <wsdlsoap:address location="http://192.168.206.105:30170/EcomOnl/services/ECOMCommonService/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
