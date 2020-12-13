@@ -1,0 +1,601 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <soapenv:Header>
+      <sdpHeaders:sdpServiceResponseHeaders xmlns:sdpHeaders="http://group.singtel.com/enterpriseapplicationintegration/common-types/v1">
+         <sdpHeaders:transactionResponseDateTime>2020-03-05T11:49:59</sdpHeaders:transactionResponseDateTime>
+         <sdpHeaders:transactionId>c1a8d6cd-c07f-4ace-9921-adedcc7715aa</sdpHeaders:transactionId>
+      </sdpHeaders:sdpServiceResponseHeaders>
+   </soapenv:Header>
+   <soapenv:Body>
+      <getNotesExtResp xmlns="http://common.ecom/">
+         <result xmlns="" xmlns:ns1="http://common.ecom/">
+            <statusDO>
+               <status>true</status>
+            </statusDO>
+            <result>
+               <notesInfoExt>
+                  <NotesInfoExtDO>
+                     <notesId>2345939975</notesId>
+                     <workOrdNo xsi:nil="1"/>
+                     <svcInstId xsi:nil="1"/>
+                     <acctId>C102042880</acctId>
+                     <notesType>Account</notesType>
+                     <notesText xsi:nil="1"/>
+                     <notesDesc>The blacklist is changed from 99 to 2</notesDesc>
+                     <permanentInd xsi:nil="1"/>
+                     <expiredDt xsi:nil="1"/>
+                     <createdBy>OP_BLACKLIST_UPD_TRIG</createdBy>
+                     <createdDt>15/01/2020 14:45:31</createdDt>
+                     <lastUpdateId>OP_BLACKLIST_UPD_TRIG</lastUpdateId>
+                     <lastUpdateDt>15/01/2020 14:45:31</lastUpdateDt>
+                     <inUseInd xsi:nil="1"/>
+                  </NotesInfoExtDO>
+                  <NotesInfoExtDO>
+                     <notesId>2345939976</notesId>
+                     <workOrdNo xsi:nil="1"/>
+                     <svcInstId xsi:nil="1"/>
+                     <acctId>C102042880</acctId>
+                     <notesType>Account</notesType>
+                     <notesText xsi:nil="1"/>
+                     <notesDesc>Unset Blacklist Reason,The blacklist is changed from 2 to 99</notesDesc>
+                     <permanentInd xsi:nil="1"/>
+                     <expiredDt xsi:nil="1"/>
+                     <createdBy>OP_BLACKLIST_UPD_TRIG</createdBy>
+                     <createdDt>15/01/2020 15:00:01</createdDt>
+                     <lastUpdateId>OP_BLACKLIST_UPD_TRIG</lastUpdateId>
+                     <lastUpdateDt>15/01/2020 15:00:01</lastUpdateDt>
+                     <inUseInd xsi:nil="1"/>
+                  </NotesInfoExtDO>
+                  <NotesInfoExtDO>
+                     <notesId>2345939977</notesId>
+                     <workOrdNo xsi:nil="1"/>
+                     <svcInstId xsi:nil="1"/>
+                     <acctId>C102042880</acctId>
+                     <notesType>Account</notesType>
+                     <notesText xsi:nil="1"/>
+                     <notesDesc>Unset Blacklist Reason,The blacklist is changed from 99 to 99</notesDesc>
+                     <permanentInd xsi:nil="1"/>
+                     <expiredDt xsi:nil="1"/>
+                     <createdBy>OP_BLACKLIST_UPD_TRIG</createdBy>
+                     <createdDt>15/01/2020 15:02:19</createdDt>
+                     <lastUpdateId>OP_BLACKLIST_UPD_TRIG</lastUpdateId>
+                     <lastUpdateDt>15/01/2020 15:02:19</lastUpdateDt>
+                     <inUseInd xsi:nil="1"/>
+                  </NotesInfoExtDO>
+                  <NotesInfoExtDO>
+                     <notesId>2345939978</notesId>
+                     <workOrdNo xsi:nil="1"/>
+                     <svcInstId xsi:nil="1"/>
+                     <acctId>C102042880</acctId>
+                     <notesType>Account</notesType>
+                     <notesText xsi:nil="1"/>
+                     <notesDesc>Unset Blacklist Reason,The blacklist is changed from 99 to 99</notesDesc>
+                     <permanentInd xsi:nil="1"/>
+                     <expiredDt xsi:nil="1"/>
+                     <createdBy>OP_BLACKLIST_UPD_TRIG</createdBy>
+                     <createdDt>15/01/2020 15:02:39</createdDt>
+                     <lastUpdateId>OP_BLACKLIST_UPD_TRIG</lastUpdateId>
+                     <lastUpdateDt>15/01/2020 15:02:39</lastUpdateDt>
+                     <inUseInd xsi:nil="1"/>
+                  </NotesInfoExtDO>
+                  <NotesInfoExtDO>
+                     <notesId>2345939979</notesId>
+                     <workOrdNo xsi:nil="1"/>
+                     <svcInstId xsi:nil="1"/>
+                     <acctId>C102042880</acctId>
+                     <notesType>Account</notesType>
+                     <notesText xsi:nil="1"/>
+                     <notesDesc>Unset Blacklist Reason,The blacklist is changed from 99 to 99</notesDesc>
+                     <permanentInd xsi:nil="1"/>
+                     <expiredDt xsi:nil="1"/>
+                     <createdBy>OP_BLACKLIST_UPD_TRIG</createdBy>
+                     <createdDt>15/01/2020 15:04:03</createdDt>
+                     <lastUpdateId>OP_BLACKLIST_UPD_TRIG</lastUpdateId>
+                     <lastUpdateDt>15/01/2020 15:04:03</lastUpdateDt>
+                     <inUseInd xsi:nil="1"/>
+                  </NotesInfoExtDO>
+                  <NotesInfoExtDO>
+                     <notesId>2345939980</notesId>
+                     <workOrdNo xsi:nil="1"/>
+                     <svcInstId xsi:nil="1"/>
+                     <acctId>C102042880</acctId>
+                     <notesType>Account</notesType>
+                     <notesText xsi:nil="1"/>
+                     <notesDesc>The blacklist is changed from 99 to 2</notesDesc>
+                     <permanentInd xsi:nil="1"/>
+                     <expiredDt xsi:nil="1"/>
+                     <createdBy>OP_BLACKLIST_UPD_TRIG</createdBy>
+                     <createdDt>15/01/2020 15:11:09</createdDt>
+                     <lastUpdateId>OP_BLACKLIST_UPD_TRIG</lastUpdateId>
+                     <lastUpdateDt>15/01/2020 15:11:09</lastUpdateDt>
+                     <inUseInd xsi:nil="1"/>
+                  </NotesInfoExtDO>
+                  <NotesInfoExtDO>
+                     <notesId>2345939983</notesId>
+                     <workOrdNo xsi:nil="1"/>
+                     <svcInstId xsi:nil="1"/>
+                     <acctId>C102042880</acctId>
+                     <notesType>Account</notesType>
+                     <notesText xsi:nil="1"/>
+                     <notesDesc>Unset Blacklist Reason,The blacklist is changed from 2 to 99</notesDesc>
+                     <permanentInd xsi:nil="1"/>
+                     <expiredDt xsi:nil="1"/>
+                     <createdBy>OP_BLACKLIST_UPD_TRIG</createdBy>
+                     <createdDt>15/01/2020 15:26:52</createdDt>
+                     <lastUpdateId>OP_BLACKLIST_UPD_TRIG</lastUpdateId>
+                     <lastUpdateDt>15/01/2020 15:26:52</lastUpdateDt>
+                     <inUseInd xsi:nil="1"/>
+                  </NotesInfoExtDO>
+                  <NotesInfoExtDO>
+                     <notesId>2345939985</notesId>
+                     <workOrdNo xsi:nil="1"/>
+                     <svcInstId xsi:nil="1"/>
+                     <acctId>C102042880</acctId>
+                     <notesType>Account</notesType>
+                     <notesText xsi:nil="1"/>
+                     <notesDesc>Unset Blacklist Reason,The blacklist is changed from 99 to 99</notesDesc>
+                     <permanentInd xsi:nil="1"/>
+                     <expiredDt xsi:nil="1"/>
+                     <createdBy>OP_BLACKLIST_UPD_TRIG</createdBy>
+                     <createdDt>15/01/2020 15:29:17</createdDt>
+                     <lastUpdateId>OP_BLACKLIST_UPD_TRIG</lastUpdateId>
+                     <lastUpdateDt>15/01/2020 15:29:17</lastUpdateDt>
+                     <inUseInd xsi:nil="1"/>
+                  </NotesInfoExtDO>
+                  <NotesInfoExtDO>
+                     <notesId>2345939986</notesId>
+                     <workOrdNo xsi:nil="1"/>
+                     <svcInstId xsi:nil="1"/>
+                     <acctId>C102042880</acctId>
+                     <notesType>Account</notesType>
+                     <notesText xsi:nil="1"/>
+                     <notesDesc>Unset Blacklist Reason,The blacklist is changed from 99 to 99</notesDesc>
+                     <permanentInd xsi:nil="1"/>
+                     <expiredDt xsi:nil="1"/>
+                     <createdBy>OP_BLACKLIST_UPD_TRIG</createdBy>
+                     <createdDt>15/01/2020 15:29:42</createdDt>
+                     <lastUpdateId>OP_BLACKLIST_UPD_TRIG</lastUpdateId>
+                     <lastUpdateDt>15/01/2020 15:29:42</lastUpdateDt>
+                     <inUseInd xsi:nil="1"/>
+                  </NotesInfoExtDO>
+                  <NotesInfoExtDO>
+                     <notesId>2345939987</notesId>
+                     <workOrdNo xsi:nil="1"/>
+                     <svcInstId xsi:nil="1"/>
+                     <acctId>C102042880</acctId>
+                     <notesType>Account</notesType>
+                     <notesText xsi:nil="1"/>
+                     <notesDesc>The blacklist is changed from 99 to 5</notesDesc>
+                     <permanentInd xsi:nil="1"/>
+                     <expiredDt xsi:nil="1"/>
+                     <createdBy>OP_BLACKLIST_UPD_TRIG</createdBy>
+                     <createdDt>15/01/2020 15:37:05</createdDt>
+                     <lastUpdateId>OP_BLACKLIST_UPD_TRIG</lastUpdateId>
+                     <lastUpdateDt>15/01/2020 15:37:05</lastUpdateDt>
+                     <inUseInd xsi:nil="1"/>
+                  </NotesInfoExtDO>
+                  <NotesInfoExtDO>
+                     <notesId>2345939988</notesId>
+                     <workOrdNo xsi:nil="1"/>
+                     <svcInstId xsi:nil="1"/>
+                     <acctId>C102042880</acctId>
+                     <notesType>Account</notesType>
+                     <notesText xsi:nil="1"/>
+                     <notesDesc>The blacklist is changed from 5 to 2</notesDesc>
+                     <permanentInd xsi:nil="1"/>
+                     <expiredDt xsi:nil="1"/>
+                     <createdBy>OP_BLACKLIST_UPD_TRIG</createdBy>
+                     <createdDt>15/01/2020 15:52:39</createdDt>
+                     <lastUpdateId>OP_BLACKLIST_UPD_TRIG</lastUpdateId>
+                     <lastUpdateDt>15/01/2020 15:52:39</lastUpdateDt>
+                     <inUseInd xsi:nil="1"/>
+                  </NotesInfoExtDO>
+                  <NotesInfoExtDO>
+                     <notesId>2345939993</notesId>
+                     <workOrdNo xsi:nil="1"/>
+                     <svcInstId xsi:nil="1"/>
+                     <acctId>C102042880</acctId>
+                     <notesType>Account</notesType>
+                     <notesText xsi:nil="1"/>
+                     <notesDesc>Unset Blacklist Reason,The blacklist is changed from 2 to 99</notesDesc>
+                     <permanentInd xsi:nil="1"/>
+                     <expiredDt xsi:nil="1"/>
+                     <createdBy>OP_BLACKLIST_UPD_TRIG</createdBy>
+                     <createdDt>15/01/2020 17:01:35</createdDt>
+                     <lastUpdateId>OP_BLACKLIST_UPD_TRIG</lastUpdateId>
+                     <lastUpdateDt>15/01/2020 17:01:35</lastUpdateDt>
+                     <inUseInd xsi:nil="1"/>
+                  </NotesInfoExtDO>
+                  <NotesInfoExtDO>
+                     <notesId>2345939994</notesId>
+                     <workOrdNo xsi:nil="1"/>
+                     <svcInstId xsi:nil="1"/>
+                     <acctId>C102042880</acctId>
+                     <notesType>Account</notesType>
+                     <notesText xsi:nil="1"/>
+                     <notesDesc>Unset Blacklist Reason,The blacklist is changed from 99 to 99</notesDesc>
+                     <permanentInd xsi:nil="1"/>
+                     <expiredDt xsi:nil="1"/>
+                     <createdBy>OP_BLACKLIST_UPD_TRIG</createdBy>
+                     <createdDt>15/01/2020 17:02:08</createdDt>
+                     <lastUpdateId>OP_BLACKLIST_UPD_TRIG</lastUpdateId>
+                     <lastUpdateDt>15/01/2020 17:02:08</lastUpdateDt>
+                     <inUseInd xsi:nil="1"/>
+                  </NotesInfoExtDO>
+                  <NotesInfoExtDO>
+                     <notesId>2345939995</notesId>
+                     <workOrdNo xsi:nil="1"/>
+                     <svcInstId xsi:nil="1"/>
+                     <acctId>C102042880</acctId>
+                     <notesType>Account</notesType>
+                     <notesText xsi:nil="1"/>
+                     <notesDesc>Unset Blacklist Reason,The blacklist is changed from 99 to 99</notesDesc>
+                     <permanentInd xsi:nil="1"/>
+                     <expiredDt xsi:nil="1"/>
+                     <createdBy>OP_BLACKLIST_UPD_TRIG</createdBy>
+                     <createdDt>15/01/2020 17:02:16</createdDt>
+                     <lastUpdateId>OP_BLACKLIST_UPD_TRIG</lastUpdateId>
+                     <lastUpdateDt>15/01/2020 17:02:16</lastUpdateDt>
+                     <inUseInd xsi:nil="1"/>
+                  </NotesInfoExtDO>
+                  <NotesInfoExtDO>
+                     <notesId>2345939996</notesId>
+                     <workOrdNo xsi:nil="1"/>
+                     <svcInstId xsi:nil="1"/>
+                     <acctId>C102042880</acctId>
+                     <notesType>Account</notesType>
+                     <notesText xsi:nil="1"/>
+                     <notesDesc>Unset Blacklist Reason,The blacklist is changed from 99 to 99</notesDesc>
+                     <permanentInd xsi:nil="1"/>
+                     <expiredDt xsi:nil="1"/>
+                     <createdBy>OP_BLACKLIST_UPD_TRIG</createdBy>
+                     <createdDt>15/01/2020 17:03:02</createdDt>
+                     <lastUpdateId>OP_BLACKLIST_UPD_TRIG</lastUpdateId>
+                     <lastUpdateDt>15/01/2020 17:03:02</lastUpdateDt>
+                     <inUseInd xsi:nil="1"/>
+                  </NotesInfoExtDO>
+                  <NotesInfoExtDO>
+                     <notesId>2345939997</notesId>
+                     <workOrdNo xsi:nil="1"/>
+                     <svcInstId xsi:nil="1"/>
+                     <acctId>C102042880</acctId>
+                     <notesType>Account</notesType>
+                     <notesText xsi:nil="1"/>
+                     <notesDesc>Unset Blacklist Reason,The blacklist is changed from 99 to 99</notesDesc>
+                     <permanentInd xsi:nil="1"/>
+                     <expiredDt xsi:nil="1"/>
+                     <createdBy>OP_BLACKLIST_UPD_TRIG</createdBy>
+                     <createdDt>15/01/2020 17:03:28</createdDt>
+                     <lastUpdateId>OP_BLACKLIST_UPD_TRIG</lastUpdateId>
+                     <lastUpdateDt>15/01/2020 17:03:28</lastUpdateDt>
+                     <inUseInd xsi:nil="1"/>
+                  </NotesInfoExtDO>
+                  <NotesInfoExtDO>
+                     <notesId>2345939998</notesId>
+                     <workOrdNo xsi:nil="1"/>
+                     <svcInstId xsi:nil="1"/>
+                     <acctId>C102042880</acctId>
+                     <notesType>Account</notesType>
+                     <notesText xsi:nil="1"/>
+                     <notesDesc>Unset Blacklist Reason,The blacklist is changed from 99 to 99</notesDesc>
+                     <permanentInd xsi:nil="1"/>
+                     <expiredDt xsi:nil="1"/>
+                     <createdBy>OP_BLACKLIST_UPD_TRIG</createdBy>
+                     <createdDt>15/01/2020 17:03:59</createdDt>
+                     <lastUpdateId>OP_BLACKLIST_UPD_TRIG</lastUpdateId>
+                     <lastUpdateDt>15/01/2020 17:03:59</lastUpdateDt>
+                     <inUseInd xsi:nil="1"/>
+                  </NotesInfoExtDO>
+                  <NotesInfoExtDO>
+                     <notesId>2345939999</notesId>
+                     <workOrdNo xsi:nil="1"/>
+                     <svcInstId xsi:nil="1"/>
+                     <acctId>C102042880</acctId>
+                     <notesType>Account</notesType>
+                     <notesText xsi:nil="1"/>
+                     <notesDesc>Unset Blacklist Reason,The blacklist is changed from 99 to 99</notesDesc>
+                     <permanentInd xsi:nil="1"/>
+                     <expiredDt xsi:nil="1"/>
+                     <createdBy>OP_BLACKLIST_UPD_TRIG</createdBy>
+                     <createdDt>15/01/2020 17:05:24</createdDt>
+                     <lastUpdateId>OP_BLACKLIST_UPD_TRIG</lastUpdateId>
+                     <lastUpdateDt>15/01/2020 17:05:24</lastUpdateDt>
+                     <inUseInd xsi:nil="1"/>
+                  </NotesInfoExtDO>
+                  <NotesInfoExtDO>
+                     <notesId>2345940000</notesId>
+                     <workOrdNo xsi:nil="1"/>
+                     <svcInstId xsi:nil="1"/>
+                     <acctId>C102042880</acctId>
+                     <notesType>Account</notesType>
+                     <notesText xsi:nil="1"/>
+                     <notesDesc>The blacklist is changed from 99 to 5</notesDesc>
+                     <permanentInd xsi:nil="1"/>
+                     <expiredDt xsi:nil="1"/>
+                     <createdBy>OP_BLACKLIST_UPD_TRIG</createdBy>
+                     <createdDt>15/01/2020 17:17:39</createdDt>
+                     <lastUpdateId>OP_BLACKLIST_UPD_TRIG</lastUpdateId>
+                     <lastUpdateDt>15/01/2020 17:17:39</lastUpdateDt>
+                     <inUseInd xsi:nil="1"/>
+                  </NotesInfoExtDO>
+                  <NotesInfoExtDO>
+                     <notesId>2345940002</notesId>
+                     <workOrdNo xsi:nil="1"/>
+                     <svcInstId xsi:nil="1"/>
+                     <acctId>C102042880</acctId>
+                     <notesType>Account</notesType>
+                     <notesText xsi:nil="1"/>
+                     <notesDesc>The blacklist is changed from 5 to 2</notesDesc>
+                     <permanentInd xsi:nil="1"/>
+                     <expiredDt xsi:nil="1"/>
+                     <createdBy>OP_BLACKLIST_UPD_TRIG</createdBy>
+                     <createdDt>15/01/2020 18:16:16</createdDt>
+                     <lastUpdateId>OP_BLACKLIST_UPD_TRIG</lastUpdateId>
+                     <lastUpdateDt>15/01/2020 18:16:16</lastUpdateDt>
+                     <inUseInd xsi:nil="1"/>
+                  </NotesInfoExtDO>
+                  <NotesInfoExtDO>
+                     <notesId>2345940003</notesId>
+                     <workOrdNo xsi:nil="1"/>
+                     <svcInstId xsi:nil="1"/>
+                     <acctId>C102042880</acctId>
+                     <notesType>Account</notesType>
+                     <notesText xsi:nil="1"/>
+                     <notesDesc>The blacklist is changed from 2 to 1</notesDesc>
+                     <permanentInd xsi:nil="1"/>
+                     <expiredDt xsi:nil="1"/>
+                     <createdBy>OP_BLACKLIST_UPD_TRIG</createdBy>
+                     <createdDt>15/01/2020 18:17:46</createdDt>
+                     <lastUpdateId>OP_BLACKLIST_UPD_TRIG</lastUpdateId>
+                     <lastUpdateDt>15/01/2020 18:17:46</lastUpdateDt>
+                     <inUseInd xsi:nil="1"/>
+                  </NotesInfoExtDO>
+                  <NotesInfoExtDO>
+                     <notesId>2345940004</notesId>
+                     <workOrdNo xsi:nil="1"/>
+                     <svcInstId xsi:nil="1"/>
+                     <acctId>C102042880</acctId>
+                     <notesType>Account</notesType>
+                     <notesText xsi:nil="1"/>
+                     <notesDesc>Unset Blacklist Reason,The blacklist is changed from 99 to 99</notesDesc>
+                     <permanentInd xsi:nil="1"/>
+                     <expiredDt xsi:nil="1"/>
+                     <createdBy>OP_BLACKLIST_UPD_TRIG</createdBy>
+                     <createdDt>15/01/2020 18:45:54</createdDt>
+                     <lastUpdateId>OP_BLACKLIST_UPD_TRIG</lastUpdateId>
+                     <lastUpdateDt>15/01/2020 18:45:54</lastUpdateDt>
+                     <inUseInd xsi:nil="1"/>
+                  </NotesInfoExtDO>
+                  <NotesInfoExtDO>
+                     <notesId>2345940005</notesId>
+                     <workOrdNo xsi:nil="1"/>
+                     <svcInstId xsi:nil="1"/>
+                     <acctId>C102042880</acctId>
+                     <notesType>Account</notesType>
+                     <notesText xsi:nil="1"/>
+                     <notesDesc>Unset Blacklist Reason,The blacklist is changed from 99 to 99</notesDesc>
+                     <permanentInd xsi:nil="1"/>
+                     <expiredDt xsi:nil="1"/>
+                     <createdBy>OP_BLACKLIST_UPD_TRIG</createdBy>
+                     <createdDt>15/01/2020 18:46:32</createdDt>
+                     <lastUpdateId>OP_BLACKLIST_UPD_TRIG</lastUpdateId>
+                     <lastUpdateDt>15/01/2020 18:46:32</lastUpdateDt>
+                     <inUseInd xsi:nil="1"/>
+                  </NotesInfoExtDO>
+                  <NotesInfoExtDO>
+                     <notesId>2345940006</notesId>
+                     <workOrdNo xsi:nil="1"/>
+                     <svcInstId xsi:nil="1"/>
+                     <acctId>C102042880</acctId>
+                     <notesType>Account</notesType>
+                     <notesText xsi:nil="1"/>
+                     <notesDesc>The blacklist is changed from 99 to 5</notesDesc>
+                     <permanentInd xsi:nil="1"/>
+                     <expiredDt xsi:nil="1"/>
+                     <createdBy>OP_BLACKLIST_UPD_TRIG</createdBy>
+                     <createdDt>15/01/2020 18:46:56</createdDt>
+                     <lastUpdateId>OP_BLACKLIST_UPD_TRIG</lastUpdateId>
+                     <lastUpdateDt>15/01/2020 18:46:56</lastUpdateDt>
+                     <inUseInd xsi:nil="1"/>
+                  </NotesInfoExtDO>
+                  <NotesInfoExtDO>
+                     <notesId>2345940007</notesId>
+                     <workOrdNo xsi:nil="1"/>
+                     <svcInstId xsi:nil="1"/>
+                     <acctId>C102042880</acctId>
+                     <notesType>Account</notesType>
+                     <notesText xsi:nil="1"/>
+                     <notesDesc>The blacklist is changed from 5 to 2</notesDesc>
+                     <permanentInd xsi:nil="1"/>
+                     <expiredDt xsi:nil="1"/>
+                     <createdBy>OP_BLACKLIST_UPD_TRIG</createdBy>
+                     <createdDt>15/01/2020 18:48:04</createdDt>
+                     <lastUpdateId>OP_BLACKLIST_UPD_TRIG</lastUpdateId>
+                     <lastUpdateDt>15/01/2020 18:48:04</lastUpdateDt>
+                     <inUseInd xsi:nil="1"/>
+                  </NotesInfoExtDO>
+                  <NotesInfoExtDO>
+                     <notesId>2345940008</notesId>
+                     <workOrdNo xsi:nil="1"/>
+                     <svcInstId xsi:nil="1"/>
+                     <acctId>C102042880</acctId>
+                     <notesType>Account</notesType>
+                     <notesText xsi:nil="1"/>
+                     <notesDesc>The blacklist is changed from 2 to 1</notesDesc>
+                     <permanentInd xsi:nil="1"/>
+                     <expiredDt xsi:nil="1"/>
+                     <createdBy>OP_BLACKLIST_UPD_TRIG</createdBy>
+                     <createdDt>15/01/2020 18:48:26</createdDt>
+                     <lastUpdateId>OP_BLACKLIST_UPD_TRIG</lastUpdateId>
+                     <lastUpdateDt>15/01/2020 18:48:26</lastUpdateDt>
+                     <inUseInd xsi:nil="1"/>
+                  </NotesInfoExtDO>
+                  <NotesInfoExtDO>
+                     <notesId>2345940009</notesId>
+                     <workOrdNo xsi:nil="1"/>
+                     <svcInstId xsi:nil="1"/>
+                     <acctId>C102042880</acctId>
+                     <notesType>Account</notesType>
+                     <notesText xsi:nil="1"/>
+                     <notesDesc>Unset Blacklist Reason,The blacklist is changed from 1 to 99</notesDesc>
+                     <permanentInd xsi:nil="1"/>
+                     <expiredDt xsi:nil="1"/>
+                     <createdBy>OP_BLACKLIST_UPD_TRIG</createdBy>
+                     <createdDt>15/01/2020 18:52:53</createdDt>
+                     <lastUpdateId>OP_BLACKLIST_UPD_TRIG</lastUpdateId>
+                     <lastUpdateDt>15/01/2020 18:52:53</lastUpdateDt>
+                     <inUseInd xsi:nil="1"/>
+                  </NotesInfoExtDO>
+                  <NotesInfoExtDO>
+                     <notesId>2345940010</notesId>
+                     <workOrdNo xsi:nil="1"/>
+                     <svcInstId xsi:nil="1"/>
+                     <acctId>C102042880</acctId>
+                     <notesType>Account</notesType>
+                     <notesText xsi:nil="1"/>
+                     <notesDesc>The blacklist is changed from 99 to 2</notesDesc>
+                     <permanentInd xsi:nil="1"/>
+                     <expiredDt xsi:nil="1"/>
+                     <createdBy>OP_BLACKLIST_UPD_TRIG</createdBy>
+                     <createdDt>15/01/2020 19:12:04</createdDt>
+                     <lastUpdateId>OP_BLACKLIST_UPD_TRIG</lastUpdateId>
+                     <lastUpdateDt>15/01/2020 19:12:04</lastUpdateDt>
+                     <inUseInd xsi:nil="1"/>
+                  </NotesInfoExtDO>
+                  <NotesInfoExtDO>
+                     <notesId>2345940011</notesId>
+                     <workOrdNo xsi:nil="1"/>
+                     <svcInstId xsi:nil="1"/>
+                     <acctId>C102042880</acctId>
+                     <notesType>Account</notesType>
+                     <notesText xsi:nil="1"/>
+                     <notesDesc>Unset Blacklist Reason,The blacklist is changed from 1 to 99</notesDesc>
+                     <permanentInd xsi:nil="1"/>
+                     <expiredDt xsi:nil="1"/>
+                     <createdBy>OP_BLACKLIST_UPD_TRIG</createdBy>
+                     <createdDt>15/01/2020 19:22:59</createdDt>
+                     <lastUpdateId>OP_BLACKLIST_UPD_TRIG</lastUpdateId>
+                     <lastUpdateDt>15/01/2020 19:22:59</lastUpdateDt>
+                     <inUseInd xsi:nil="1"/>
+                  </NotesInfoExtDO>
+                  <NotesInfoExtDO>
+                     <notesId>2345940012</notesId>
+                     <workOrdNo xsi:nil="1"/>
+                     <svcInstId xsi:nil="1"/>
+                     <acctId>C102042880</acctId>
+                     <notesType>Account</notesType>
+                     <notesText xsi:nil="1"/>
+                     <notesDesc>The blacklist is changed from 99 to 99</notesDesc>
+                     <permanentInd xsi:nil="1"/>
+                     <expiredDt xsi:nil="1"/>
+                     <createdBy>OP_BLACKLIST_UPD_TRIG</createdBy>
+                     <createdDt>15/01/2020 19:23:17</createdDt>
+                     <lastUpdateId>OP_BLACKLIST_UPD_TRIG</lastUpdateId>
+                     <lastUpdateDt>15/01/2020 19:23:17</lastUpdateDt>
+                     <inUseInd xsi:nil="1"/>
+                  </NotesInfoExtDO>
+                  <NotesInfoExtDO>
+                     <notesId>2345940013</notesId>
+                     <workOrdNo xsi:nil="1"/>
+                     <svcInstId xsi:nil="1"/>
+                     <acctId>C102042880</acctId>
+                     <notesType>Account</notesType>
+                     <notesText xsi:nil="1"/>
+                     <notesDesc>The blacklist is changed from 5 to 99</notesDesc>
+                     <permanentInd xsi:nil="1"/>
+                     <expiredDt xsi:nil="1"/>
+                     <createdBy>OP_BLACKLIST_UPD_TRIG</createdBy>
+                     <createdDt>15/01/2020 19:23:39</createdDt>
+                     <lastUpdateId>OP_BLACKLIST_UPD_TRIG</lastUpdateId>
+                     <lastUpdateDt>15/01/2020 19:23:39</lastUpdateDt>
+                     <inUseInd xsi:nil="1"/>
+                  </NotesInfoExtDO>
+                  <NotesInfoExtDO>
+                     <notesId>2345940014</notesId>
+                     <workOrdNo xsi:nil="1"/>
+                     <svcInstId xsi:nil="1"/>
+                     <acctId>C102042880</acctId>
+                     <notesType>Account</notesType>
+                     <notesText xsi:nil="1"/>
+                     <notesDesc>Unset Blacklist Reason,The blacklist is changed from 2 to 99</notesDesc>
+                     <permanentInd xsi:nil="1"/>
+                     <expiredDt xsi:nil="1"/>
+                     <createdBy>OP_BLACKLIST_UPD_TRIG</createdBy>
+                     <createdDt>15/01/2020 19:23:52</createdDt>
+                     <lastUpdateId>OP_BLACKLIST_UPD_TRIG</lastUpdateId>
+                     <lastUpdateDt>15/01/2020 19:23:52</lastUpdateDt>
+                     <inUseInd xsi:nil="1"/>
+                  </NotesInfoExtDO>
+                  <NotesInfoExtDO>
+                     <notesId>2345938903</notesId>
+                     <workOrdNo xsi:nil="1"/>
+                     <svcInstId xsi:nil="1"/>
+                     <acctId>C102042880</acctId>
+                     <notesType>Account</notesType>
+                     <notesText xsi:nil="1"/>
+                     <notesDesc>Original Value : Y, New Value : N
+Modification Reason - test reamark</notesDesc>
+                     <permanentInd xsi:nil="1"/>
+                     <expiredDt>01/01/1970 07:30:00</expiredDt>
+                     <createdBy>DEF-user-liush</createdBy>
+                     <createdDt>19/11/2019 14:37:14</createdDt>
+                     <lastUpdateId>liush</lastUpdateId>
+                     <lastUpdateDt>19/11/2019 14:37:14</lastUpdateDt>
+                     <inUseInd xsi:nil="1"/>
+                  </NotesInfoExtDO>
+                  <NotesInfoExtDO>
+                     <notesId>2345938905</notesId>
+                     <workOrdNo xsi:nil="1"/>
+                     <svcInstId xsi:nil="1"/>
+                     <acctId>C102042880</acctId>
+                     <notesType>Account</notesType>
+                     <notesText xsi:nil="1"/>
+                     <notesDesc>Original Value : Y, New Value : N
+Modification Reason - test reamark</notesDesc>
+                     <permanentInd xsi:nil="1"/>
+                     <expiredDt>01/01/1970 07:30:00</expiredDt>
+                     <createdBy>DEF-user-qiufeng3</createdBy>
+                     <createdDt>19/11/2019 16:16:29</createdDt>
+                     <lastUpdateId>qiufeng3</lastUpdateId>
+                     <lastUpdateDt>19/11/2019 16:16:29</lastUpdateDt>
+                     <inUseInd xsi:nil="1"/>
+                  </NotesInfoExtDO>
+                  <NotesInfoExtDO>
+                     <notesId>2345938904</notesId>
+                     <workOrdNo xsi:nil="1"/>
+                     <svcInstId xsi:nil="1"/>
+                     <acctId>C102042880</acctId>
+                     <notesType>Account</notesType>
+                     <notesText xsi:nil="1"/>
+                     <notesDesc>Original Value : Y, New Value : N
+Modification Reason - test reamark</notesDesc>
+                     <permanentInd xsi:nil="1"/>
+                     <expiredDt>01/01/1970 07:30:00</expiredDt>
+                     <createdBy>DEF-user-qiufeng3</createdBy>
+                     <createdDt>19/11/2019 15:04:55</createdDt>
+                     <lastUpdateId>qiufeng3</lastUpdateId>
+                     <lastUpdateDt>19/11/2019 15:04:55</lastUpdateDt>
+                     <inUseInd xsi:nil="1"/>
+                  </NotesInfoExtDO>
+                  <NotesInfoExtDO>
+                     <notesId>2345938906</notesId>
+                     <workOrdNo xsi:nil="1"/>
+                     <svcInstId xsi:nil="1"/>
+                     <acctId>C102042880</acctId>
+                     <notesType>Account</notesType>
+                     <notesText xsi:nil="1"/>
+                     <notesDesc>Original Value : Y, New Value : N
+Modification Reason - test reamark</notesDesc>
+                     <permanentInd xsi:nil="1"/>
+                     <expiredDt>01/01/1970 07:30:00</expiredDt>
+                     <createdBy>DEF-user-qiufeng3</createdBy>
+                     <createdDt>19/11/2019 17:31:36</createdDt>
+                     <lastUpdateId>qiufeng3</lastUpdateId>
+                     <lastUpdateDt>19/11/2019 17:31:36</lastUpdateDt>
+                     <inUseInd xsi:nil="1"/>
+                  </NotesInfoExtDO>
+               </notesInfoExt>
+            </result>
+         </result>
+      </getNotesExtResp>
+   </soapenv:Body>
+</soapenv:Envelope>

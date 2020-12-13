@@ -106,23 +106,18 @@ ns soap http://schemas.xmlsoap.org/soap/envelope
         </ee:transform>
     </flow>
     <flow name="getNotesExt:\soapkit-config">
-        <ee:transform>
-            <ee:message>
-                <ee:set-payload><![CDATA[%dw 2.0
-output application/java
-ns soap http://schemas.xmlsoap.org/soap/envelope
+       <file:read doc:name="Read" doc:id="c1df9f39-93f8-4a62-8592-e00db09cf9a0" config-ref="File_Config" path="#[p('app.home')++&quot;/getNotesExtResponse.xml&quot;]" />
+		<xml-module:xpath-extract doc:name="Xpath extract" doc:id="749ba87f-a083-4017-b616-a38b7519067a" config-ref="XML_Config" xpath="/soap:Envelope/soap:Body/*" namespaceDirectory="Namespace_directory" />
+		<ee:transform doc:name="Transform Message" doc:id="576a896d-6745-4259-874e-048b959bb7f0" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/xml
 ---
-{
-    body: {
-        soap#Fault: {
-            faultcode: "soap:Server",
-            faultstring: "Operation [getNotesExt:\soapkit-config] not implemented"
-        }
-    } write "application/xml"
-}]]></ee:set-payload>
-            </ee:message>
-        </ee:transform>
-    </flow>
+read(payload[0],'application/xml')]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+		<logger level="INFO" doc:name="Logger" doc:id="a52e3fe6-1905-40f6-aa63-cdedcf501db6" message="#[payload]" />
+      </flow>
     <flow name="getPrdtTieInfo:\soapkit-config">
         <ee:transform>
             <ee:message>
