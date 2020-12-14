@@ -3,7 +3,7 @@
 http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd
 http://www.mulesoft.org/schema/mule/xml-module http://www.mulesoft.org/schema/mule/xml-module/current/mule-xml-module.xsd">
     <http:listener-config name="api-httpListenerConfig">
-        <http:listener-connection host="0.0.0.0" port="8084"/>
+        <http:listener-connection host="0.0.0.0" port="8081"/>
     </http:listener-config> 
     <apikit-soap:config httpStatusVarName="httpStatus" name="soapkit-config" port="ECOMCommonServiceSOAP" service="ECOMCommonService" wsdlLocation="ECOMCommonService.wsdl"/>
     <file:config name="File_Config" doc:name="File Config" doc:id="928ab675-bb72-482b-bcfe-fe291eaa9cb2" />
