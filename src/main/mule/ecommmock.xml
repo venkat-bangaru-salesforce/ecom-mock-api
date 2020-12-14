@@ -83,22 +83,17 @@ ns soap http://schemas.xmlsoap.org/soap/envelope
         </ee:transform>
     </flow>
     <flow name="getAddrHistBySvcInstId:\soapkit-config">
-        <ee:transform>
-            <ee:message>
-                <ee:set-payload><![CDATA[%dw 2.0
-output application/java
-ns soap http://schemas.xmlsoap.org/soap/envelope
+        <file:read doc:name="Read" doc:id="b00b55f7-cc02-4993-9e37-4f2558a53062" config-ref="File_Config" path="#[p('app.home')++&quot;/getAddrHistBySvcInstIdResponse.xml&quot;]" />
+		<xml-module:xpath-extract doc:name="Xpath extract" doc:id="4993b74f-0012-4204-abdc-99a19087286f" config-ref="XML_Config" xpath="/soap:Envelope/soap:Body/*" namespaceDirectory="Namespace_directory" />
+		<ee:transform doc:name="Transform Message" doc:id="c53ffa7c-a130-4379-be80-7f434eeb4cd3" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/xml
 ---
-{
-    body: {
-        soap#Fault: {
-            faultcode: "soap:Server",
-            faultstring: "Operation [getAddrHistBySvcInstId:\soapkit-config] not implemented"
-        }
-    } write "application/xml"
-}]]></ee:set-payload>
-            </ee:message>
-        </ee:transform>
+read(payload[0],'application/xml')]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+		<logger level="INFO" doc:name="Logger" doc:id="012c0f2b-7a94-4a07-a782-9fb252b975b1" message="#[payload]" />
     </flow>
     <flow name="getNotesExt:\soapkit-config">
     	<file:read doc:name="Read" doc:id="48b6042a-1c00-45b8-9fbb-590c3b53831c" config-ref="File_Config" path="#[p('app.home')++&quot;/getNotesExtResponse.xml&quot;]" />
