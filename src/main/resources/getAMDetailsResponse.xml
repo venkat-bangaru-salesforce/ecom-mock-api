@@ -1,0 +1,22 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <soapenv:Header>
+      <sdpHeaders:sdpServiceResponseHeaders xmlns:sdpHeaders="http://group.singtel.com/enterpriseapplicationintegration/common-types/v1">
+         <sdpHeaders:transactionResponseDateTime>2020-03-05T11:37:08</sdpHeaders:transactionResponseDateTime>
+         <sdpHeaders:transactionId>d23d2c12-9b62-467f-a501-7f7823c43c71</sdpHeaders:transactionId>
+      </sdpHeaders:sdpServiceResponseHeaders>
+   </soapenv:Header>
+   <soapenv:Body>
+      <getAMDetailsResp xmlns="http://common.ecom/">
+         <getAMDetailsDO xmlns="" xmlns:ns1="http://common.ecom/">
+            <statusDO>
+               <status>true</status>
+            </statusDO>
+			<amDetailsDO>
+				<amId>432</amId>
+				<amName>Hany</amName>
+			</amDetailsDO>
+            <secAMId>hengyj*null</secAMId>
+         </getAMDetailsDO>
+      </getAMDetailsResp>
+   </soapenv:Body>
+</soapenv:Envelope>

@@ -4,7 +4,7 @@ http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/fil
 http://www.mulesoft.org/schema/mule/xml-module http://www.mulesoft.org/schema/mule/xml-module/current/mule-xml-module.xsd">
     <http:listener-config name="api-httpListenerConfig">
         <http:listener-connection host="0.0.0.0" port="8084"/>
-    </http:listener-config>
+    </http:listener-config> 
     <apikit-soap:config httpStatusVarName="httpStatus" name="soapkit-config" port="ECOMCommonServiceSOAP" service="ECOMCommonService" wsdlLocation="ECOMCommonService.wsdl"/>
     <file:config name="File_Config" doc:name="File Config" doc:id="928ab675-bb72-482b-bcfe-fe291eaa9cb2" />
 	<xml-module:config name="XML_Config" doc:name="XML Config" doc:id="9e4aa870-334a-4da8-922e-f533909d808b" />
@@ -106,9 +106,9 @@ ns soap http://schemas.xmlsoap.org/soap/envelope
         </ee:transform>
     </flow>
     <flow name="getNotesExt:\soapkit-config">
-       <file:read doc:name="Read" doc:id="c1df9f39-93f8-4a62-8592-e00db09cf9a0" config-ref="File_Config" path="#[p('app.home')++&quot;/getNotesExtResponse.xml&quot;]" />
-		<xml-module:xpath-extract doc:name="Xpath extract" doc:id="749ba87f-a083-4017-b616-a38b7519067a" config-ref="XML_Config" xpath="/soap:Envelope/soap:Body/*" namespaceDirectory="Namespace_directory" />
-		<ee:transform doc:name="Transform Message" doc:id="576a896d-6745-4259-874e-048b959bb7f0" >
+    	<file:read doc:name="Read" doc:id="48b6042a-1c00-45b8-9fbb-590c3b53831c" config-ref="File_Config" path="#[p('app.home')++&quot;/getNotesExtResponse.xml&quot;]" />
+		<xml-module:xpath-extract doc:name="Xpath extract" doc:id="ddd12424-b79c-47ea-8e02-f3e052332e6e" config-ref="XML_Config" xpath="/soap:Envelope/soap:Body/*" namespaceDirectory="Namespace_directory" />
+		<ee:transform doc:name="Transform Message" doc:id="0bc1d40c-9bb9-4ebf-9784-5a4d5e4a5daf" >
 			<ee:message >
 				<ee:set-payload ><![CDATA[%dw 2.0
 output application/xml
@@ -116,8 +116,8 @@ output application/xml
 read(payload[0],'application/xml')]]></ee:set-payload>
 			</ee:message>
 		</ee:transform>
-		<logger level="INFO" doc:name="Logger" doc:id="a52e3fe6-1905-40f6-aa63-cdedcf501db6" message="#[payload]" />
-      </flow>
+		<logger level="INFO" doc:name="Logger" doc:id="16f8c79d-9c4f-4eb7-b84a-de3deb49a1ab" message="#[payload]" />
+    </flow>
     <flow name="getPrdtTieInfo:\soapkit-config">
         <ee:transform>
             <ee:message>
@@ -191,39 +191,29 @@ ns soap http://schemas.xmlsoap.org/soap/envelope
         </ee:transform>
     </flow>
     <flow name="getAMDetails:\soapkit-config">
-        <ee:transform>
-            <ee:message>
-                <ee:set-payload><![CDATA[%dw 2.0
-output application/java
-ns soap http://schemas.xmlsoap.org/soap/envelope
+    	<file:read doc:name="Read" doc:id="b11abadc-c488-405f-8585-0c32a24cf0e0" config-ref="File_Config" path="#[p('app.home')++&quot;/getAMDetailsResponse.xml&quot;]" />
+		<xml-module:xpath-extract doc:name="Xpath extract" doc:id="23c17836-e7d8-4903-a7f7-1fd118641c46" config-ref="XML_Config" xpath="/soap:Envelope/soap:Body/*" namespaceDirectory="Namespace_directory" />
+		<ee:transform doc:name="Transform Message" doc:id="334188dd-b3e9-4f7f-b4ce-b250e61380a9" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/xml
 ---
-{
-    body: {
-        soap#Fault: {
-            faultcode: "soap:Server",
-            faultstring: "Operation [getAMDetails:\soapkit-config] not implemented"
-        }
-    } write "application/xml"
-}]]></ee:set-payload>
-            </ee:message>
-        </ee:transform>
+read(payload[0],'application/xml')]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+		<logger level="INFO" doc:name="Logger" doc:id="df8ee5a7-a5ca-4aa8-9b27-6ddb1ce122d1" message="#[payload]" />
     </flow>
     <flow name="srchWrkOrdsByCriteria:\soapkit-config">
-        <ee:transform>
-            <ee:message>
-                <ee:set-payload><![CDATA[%dw 2.0
-output application/java
-ns soap http://schemas.xmlsoap.org/soap/envelope
+    	<file:read doc:name="Read" doc:id="d78d079a-675c-4abd-a90c-aa5433127265" config-ref="File_Config" path="#[p('app.home')++&quot;/srchWrkOrdsByCriteriaResponse.xml&quot;]" />
+		<xml-module:xpath-extract doc:name="Xpath extract" doc:id="02ef6a12-8a10-4427-a517-130a475b831b" config-ref="XML_Config" xpath="/soap:Envelope/soap:Body/*" namespaceDirectory="Namespace_directory" />
+		<ee:transform doc:name="Transform Message" doc:id="300f878e-ff0b-4e97-85c1-9a83ec6289ae" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/xml
 ---
-{
-    body: {
-        soap#Fault: {
-            faultcode: "soap:Server",
-            faultstring: "Operation [srchWrkOrdsByCriteria:\soapkit-config] not implemented"
-        }
-    } write "application/xml"
-}]]></ee:set-payload>
-            </ee:message>
-        </ee:transform>
+read(payload[0],'application/xml')]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+		<logger level="INFO" doc:name="Logger" doc:id="0ad942de-a026-45e9-bb9d-51e407fe0338" message="#[payload]" />
     </flow>
 </mule>
