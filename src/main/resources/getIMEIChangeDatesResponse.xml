@@ -1,0 +1,23 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <soapenv:Header>
+      <sdpHeaders:sdpServiceResponseHeaders xmlns:sdpHeaders="http://group.singtel.com/enterpriseapplicationintegration/common-types/v1">
+         <sdpHeaders:transactionResponseDateTime>2020-02-27T16:45:41</sdpHeaders:transactionResponseDateTime>
+         <sdpHeaders:transactionId>90080321-21ac-4cdd-b3f6-a8b51482678d</sdpHeaders:transactionId>
+      </sdpHeaders:sdpServiceResponseHeaders>
+   </soapenv:Header>
+   <soapenv:Body>
+      <getIMEIChangeDatesResp xmlns="http://common.ecom/">
+         <getIMEIChangeDatesDO xmlns="" xmlns:ns1="http://common.ecom/">
+            <statusDO>
+               <status>true</status>
+            </statusDO>
+            <imeiChangeDatesDO>
+               <ArrayOfIMEIChangeDatesDO>
+                  <svcNo>99001701</svcNo>
+                  <imeiChangeDate>11/02/2020</imeiChangeDate>
+               </ArrayOfIMEIChangeDatesDO>
+            </imeiChangeDatesDO>
+         </getIMEIChangeDatesDO>
+      </getIMEIChangeDatesResp>
+   </soapenv:Body>
+</soapenv:Envelope>

@@ -1,0 +1,37 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <soapenv:Header>
+      <sdpHeaders:sdpServiceResponseHeaders xmlns:sdpHeaders="http://group.singtel.com/enterpriseapplicationintegration/common-types/v1">
+         <sdpHeaders:transactionResponseDateTime>2020-02-27T16:44:20</sdpHeaders:transactionResponseDateTime>
+         <sdpHeaders:transactionId>f957b9d8-fcbb-4014-8d28-1195f0d49e54</sdpHeaders:transactionId>
+      </sdpHeaders:sdpServiceResponseHeaders>
+   </soapenv:Header>
+   <soapenv:Body>
+      <getPrdtTieInfoResp xmlns="http://common.ecom/">
+         <getPrdtTieInfoDO xmlns="" xmlns:ns1="http://common.ecom/">
+            <statusDO>
+               <status>true</status>
+            </statusDO>
+            <prdtTieInfoDO>
+               <ArrayOfPrdTieInfo>
+                  <tieTy>1</tieTy>
+                  <tieId>8052756</tieId>
+                  <tieDesc xsi:nil="1"/>
+                  <startDt>15/01/2020</startDt>
+                  <endDt>14/02/2020</endDt>
+                  <cancelledReason>TEST</cancelledReason>
+                  <svcOrdNo>XOP4596</svcOrdNo>
+                  <svcInstId>252763927</svcInstId>
+                  <svcTy>TS</svcTy>
+                  <arborSvcTy>5</arborSvcTy>
+                  <workOrdNo>XOP4596001</workOrdNo>
+                  <workOrdStatus>4</workOrdStatus>
+                  <extId>170000052</extId>
+                  <svcInstStatus>Active</svcInstStatus>
+                  <custId>TEST11</custId>
+                  <custName>TEST11</custName>
+               </ArrayOfPrdTieInfo>
+            </prdtTieInfoDO>
+         </getPrdtTieInfoDO>
+      </getPrdtTieInfoResp>
+   </soapenv:Body>
+</soapenv:Envelope>

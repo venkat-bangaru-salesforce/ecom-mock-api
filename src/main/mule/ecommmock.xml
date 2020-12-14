@@ -52,22 +52,17 @@ read(payload[0],'application/xml')]]></ee:set-payload>
 		<logger level="INFO" doc:name="Copy_of_Logger" doc:id="2be54e37-abd3-4886-a17d-2af07e66fe53" message="#[payload]" />
     </flow>
     <flow name="getBizCircleIndBySvcNo:\soapkit-config">
-        <ee:transform>
-            <ee:message>
-                <ee:set-payload><![CDATA[%dw 2.0
-output application/java
-ns soap http://schemas.xmlsoap.org/soap/envelope
+        <file:read doc:name="Read" doc:id="c7a76213-99dd-4d1c-a548-645f8d24d83d" config-ref="File_Config" path="#[p('app.home')++&quot;/getBizCircleIndBySvcNoResponse.xml&quot;]" />
+		<xml-module:xpath-extract doc:name="Xpath extract" doc:id="a6a9b457-fccf-4317-bee2-508028d877e6" config-ref="XML_Config" xpath="/soap:Envelope/soap:Body/*" namespaceDirectory="Namespace_directory" />
+		<ee:transform doc:name="Transform Message" doc:id="7967bc6b-e86b-40eb-bb59-3da371c431f0" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/xml
 ---
-{
-    body: {
-        soap#Fault: {
-            faultcode: "soap:Server",
-            faultstring: "Operation [getBizCircleIndBySvcNo:\soapkit-config] not implemented"
-        }
-    } write "application/xml"
-}]]></ee:set-payload>
-            </ee:message>
-        </ee:transform>
+read(payload[0],'application/xml')]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+		<logger level="INFO" doc:name="Logger" doc:id="9ab8ed79-da0a-4de5-bc8b-9a7fe97a28ef" message="#[payload]" />
     </flow>
     <flow name="updateDDIInfo:\soapkit-config">
         <ee:transform>
@@ -119,40 +114,30 @@ read(payload[0],'application/xml')]]></ee:set-payload>
 		<logger level="INFO" doc:name="Logger" doc:id="16f8c79d-9c4f-4eb7-b84a-de3deb49a1ab" message="#[payload]" />
     </flow>
     <flow name="getPrdtTieInfo:\soapkit-config">
-        <ee:transform>
-            <ee:message>
-                <ee:set-payload><![CDATA[%dw 2.0
-output application/java
-ns soap http://schemas.xmlsoap.org/soap/envelope
+        <file:read doc:name="Read" doc:id="22b958d0-bf0c-4b75-9b64-c1c1ed2bede3" config-ref="File_Config" path="#[p('app.home')++&quot;/getPrdtTieInfoResponse.xml&quot;]" />
+		<xml-module:xpath-extract doc:name="Xpath extract" doc:id="94961ef3-21d7-4a18-a7cc-a9cdec605042" config-ref="XML_Config" xpath="/soap:Envelope/soap:Body/*" namespaceDirectory="Namespace_directory" />
+		<ee:transform doc:name="Transform Message" doc:id="e48048d4-f5d5-44f9-b025-082404c12943" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/xml
 ---
-{
-    body: {
-        soap#Fault: {
-            faultcode: "soap:Server",
-            faultstring: "Operation [getPrdtTieInfo:\soapkit-config] not implemented"
-        }
-    } write "application/xml"
-}]]></ee:set-payload>
-            </ee:message>
-        </ee:transform>
+read(payload[0],'application/xml')]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+		<logger level="INFO" doc:name="Logger" doc:id="762fa828-273a-4abb-92bc-57d946e97b3b" message="#[payload]" />
     </flow>
     <flow name="getIMEIChangeDates:\soapkit-config">
-        <ee:transform>
-            <ee:message>
-                <ee:set-payload><![CDATA[%dw 2.0
-output application/java
-ns soap http://schemas.xmlsoap.org/soap/envelope
+        <file:read doc:name="Read" doc:id="eb25ac32-a185-445b-bf15-100beca21fb9" config-ref="File_Config" path="#[p('app.home')++&quot;/getIMEIChangeDatesResponse.xml&quot;]" />
+		<xml-module:xpath-extract doc:name="Xpath extract" doc:id="f1706751-a2d2-4056-a3cc-def1a6287e9c" config-ref="XML_Config" xpath="/soap:Envelope/soap:Body/*" namespaceDirectory="Namespace_directory" />
+		<ee:transform doc:name="Transform Message" doc:id="1f556162-9ca9-46a3-ab8b-a6f2940113cb" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/xml
 ---
-{
-    body: {
-        soap#Fault: {
-            faultcode: "soap:Server",
-            faultstring: "Operation [getIMEIChangeDates:\soapkit-config] not implemented"
-        }
-    } write "application/xml"
-}]]></ee:set-payload>
-            </ee:message>
-        </ee:transform>
+read(payload[0],'application/xml')]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+		<logger level="INFO" doc:name="Logger" doc:id="4887fc30-0661-4aa4-a749-00c0e81753c6" message="#[payload]" />
     </flow>
     <flow name="srchSvcNoInfoByExtAcctNo:\soapkit-config">
         <ee:transform>
@@ -173,22 +158,17 @@ ns soap http://schemas.xmlsoap.org/soap/envelope
         </ee:transform>
     </flow>
     <flow name="getContractInfobySvcNo:\soapkit-config">
-        <ee:transform>
-            <ee:message>
-                <ee:set-payload><![CDATA[%dw 2.0
-output application/java
-ns soap http://schemas.xmlsoap.org/soap/envelope
+        <file:read doc:name="Read" doc:id="58311c3b-e90e-4ef4-9a52-55db766df27e" config-ref="File_Config" path="#[p('app.home')++&quot;/getContractInfobySvcNo-response.xml&quot;]" />
+		<xml-module:xpath-extract doc:name="Xpath extract" doc:id="f3b03522-e96f-4e4e-a1f7-6484a901bd1a" config-ref="XML_Config" xpath="/soap:Envelope/soap:Body/*" namespaceDirectory="Namespace_directory" />
+		<ee:transform doc:name="Transform Message" doc:id="0ade7cc4-3da0-4dab-90d3-158e23d64af2" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/xml
 ---
-{
-    body: {
-        soap#Fault: {
-            faultcode: "soap:Server",
-            faultstring: "Operation [getContractInfobySvcNo:\soapkit-config] not implemented"
-        }
-    } write "application/xml"
-}]]></ee:set-payload>
-            </ee:message>
-        </ee:transform>
+read(payload[0],'application/xml')]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+		<logger level="INFO" doc:name="Logger" doc:id="3eb4b23d-10aa-4128-98ed-a6616b9e5156" message="#[payload]" />
     </flow>
     <flow name="getAMDetails:\soapkit-config">
     	<file:read doc:name="Read" doc:id="b11abadc-c488-405f-8585-0c32a24cf0e0" config-ref="File_Config" path="#[p('app.home')++&quot;/getAMDetailsResponse.xml&quot;]" />

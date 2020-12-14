@@ -1,0 +1,24 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <soapenv:Header>
+      <sdpHeaders:sdpServiceResponseHeaders xmlns:sdpHeaders="http://group.singtel.com/enterpriseapplicationintegration/common-types/v1">
+         <sdpHeaders:transactionResponseDateTime>2020-02-27T16:49:08</sdpHeaders:transactionResponseDateTime>
+         <sdpHeaders:transactionId>48f64194-443d-4e9d-a8a5-462cd5293b42</sdpHeaders:transactionId>
+      </sdpHeaders:sdpServiceResponseHeaders>
+   </soapenv:Header>
+   <soapenv:Body>
+      <getContractInfobySvcNoResp xmlns="http://common.ecom/">
+         <getContractInfoBySvcNoDO xmlns="" xmlns:ns1="http://common.ecom/">
+            <statusDO>
+               <status>true</status>
+            </statusDO>
+            <abstractContractInfoList>
+               <AbstractContractInfoDO>
+                  <svcNo>WBX0000054</svcNo>
+                  <startDt>17/01/2020</startDt>
+                  <endDt>17/01/2021</endDt>
+               </AbstractContractInfoDO>
+            </abstractContractInfoList>
+         </getContractInfoBySvcNoDO>
+      </getContractInfobySvcNoResp>
+   </soapenv:Body>
+</soapenv:Envelope>
